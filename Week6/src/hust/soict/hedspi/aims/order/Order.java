@@ -56,7 +56,7 @@ public class Order {
         }
     }
 
-    public boolean removeMedia(Media mediaToRemove) {  //Neu tong so media trong order = 0 thi tra ve false, con lai true
+    public boolean removeMedia(Media mediaToRemove) {       //Neu tong so media trong order = 0 thi tra ve false, con lai true
         if (this.itemsOrdered.size() == 0) return false;
         else {
             int i = 0;
@@ -70,6 +70,14 @@ public class Order {
             }
         }
         return false;
+    }
+
+    public boolean removeMedia(int mediaID) {               //Neu tong so media trong order = 0 thi tra ve false, con lai true
+        if (this.itemsOrdered.size() - 1 < mediaID) return false;
+        else {
+            this.itemsOrdered.remove(mediaID);
+            return true;
+        }
     }
 
     public double totalCost() {                     //Tinh tong so tien trong order, neu khong co don hang nao thi tra ve gia tri -1d, neu co thi tra ve gia tien.

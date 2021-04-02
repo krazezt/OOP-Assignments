@@ -6,11 +6,16 @@ import java.util.List;
 public class Book extends Media{
     private List<String> authors = new ArrayList<String>();
 
+    public Book(String strTitle) {
+        super(strTitle);
+    }
+
+    public Book(String strTitle, String strCategory, float fCost) {
+        super(strTitle, strCategory, fCost);
+    }
+
     public Book(String strTitle, String strCategory, float fCost, String strAuthor) {
         super(strTitle, strCategory, fCost);
-        this.title = strTitle;
-        this.category = strCategory;
-        this.cost = fCost;
         this.authors.add(strAuthor);
     }
 
@@ -34,6 +39,7 @@ public class Book extends Media{
 
     public String toString() {
         StringBuffer tmp = new StringBuffer();
+        tmp.append("Book - ");
 
         tmp.append(this.title);
         tmp.append(" - ");
@@ -44,11 +50,13 @@ public class Book extends Media{
         tmp.append(Float.toString(this.cost));
         tmp.append(" - ");
 
-        for (int i = 0; i < this.authors.size(); i++) {
-            tmp.append(this.authors.get(i));
-            if (i < this.authors.size()-1) tmp.append(" - ");
-            else tmp.append(".");
-        }
+        if (this.authors.size() == 0) tmp.append("UNKNOW.");
+        else
+            for (int i = 0; i < this.authors.size(); i++) {
+                tmp.append(this.authors.get(i));
+                if (i < this.authors.size()-1) tmp.append(" - ");
+                else tmp.append(".");
+            }
 
         return tmp.toString();
     }

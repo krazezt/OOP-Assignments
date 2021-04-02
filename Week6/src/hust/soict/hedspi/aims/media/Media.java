@@ -13,6 +13,12 @@ public class Media {
         this.cost = fCost;
     }
 
+    public Media (String strTitle) {
+        this.title = strTitle;
+        this.category = "UNKNOW";
+        this.cost = 0f;
+    }
+
     public String getTitle() {
         return title;
     }

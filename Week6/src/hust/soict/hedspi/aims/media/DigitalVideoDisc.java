@@ -6,7 +6,7 @@ public class DigitalVideoDisc extends Media{
     private int length;
     
     public DigitalVideoDisc(String strTitle) {
-        super(strTitle, "", 0f);
+        super(strTitle);
     }
 
     public DigitalVideoDisc(String strTitle, String strCategory, float fCost) {
@@ -35,6 +35,7 @@ public class DigitalVideoDisc extends Media{
 
     public String toString() {
         StringBuffer tmp = new StringBuffer();
+        tmp.append("DVD - ");
 
         tmp.append(this.title);
         tmp.append(" - ");
