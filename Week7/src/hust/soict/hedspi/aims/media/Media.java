@@ -1,19 +1,27 @@
 package hust.soict.hedspi.aims.media;
 
-public abstract class Media {
+public abstract class Media{
     protected String title;
     protected String category;
     protected float cost;
+    protected int itemID;
 
-    public String toString;
+    private static int id = 0;
+
+    public abstract String toString();
+    public abstract int getType();
 
     public Media (String strTitle, String strCategory, float fCost) {
+        id++;
+        this.itemID = id;
         this.title = strTitle;
         this.category = strCategory;
         this.cost = fCost;
     }
 
     public Media (String strTitle) {
+        id++;
+        this.itemID = id;
         this.title = strTitle;
         this.category = "UNKNOW";
         this.cost = 0f;
@@ -22,21 +30,16 @@ public abstract class Media {
     public String getTitle() {
         return title;
     }
-    public void setTitle(String title) {
-        this.title = title;
-    }
     public String getCategory() {
         return category;
-    }
-    public void setCategory(String category) {
-        this.category = category;
     }
     public float getCost() {
         return cost;
     }
-    public void setCost(float cost) {
-        this.cost = cost;
+    public void setCost(float fCost) {
+        this.cost = fCost;
     }
-
-    
+    public int getID() {
+        return this.itemID;
+    }
 }

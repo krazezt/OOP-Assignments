@@ -42,7 +42,6 @@ public class Aims {
                             tmpString = a.nextLine();
                             info[1] = tmpString;
 
-
                             System.out.print("DVD's Cost: ");
                             tmpFloat = a.nextFloat();
                             
