@@ -5,28 +5,18 @@ import hust.soict.hedspi.aims.media.Media;
 import hust.soict.hedspi.aims.utils.*;
 
 public class Order {
-    public static final int MAX_NUMBERS_ORDERED = 10;
-    public static final int MAX_LIMITTED_ORDERS = 5;
-    private static int nbOrders = 0;
+    public final int MAX_NUMBERS_ORDERED = 10;
 
     private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
-    
+    private Media luckyItem;
     private MyDate dateOrdered;
 
     public Order(String strDay, String strMonth, String strYear) {
-        if (nbOrders + 1 > MAX_LIMITTED_ORDERS) System.out.println("Out of orders");
-        else {
-            this.dateOrdered = new MyDate(strDay, strMonth, strYear);
-            ++nbOrders;
-        }
+        this.dateOrdered = new MyDate(strDay, strMonth, strYear);
     }
 
     public Order() {
-        if (nbOrders + 1 > MAX_LIMITTED_ORDERS) System.out.println("Out of orders");
-        else {
-            this.dateOrdered = new MyDate();
-            ++nbOrders;
-        }
+        this.dateOrdered = new MyDate();
     }
 
     public boolean addMedia(Media mediaToAdd) {
@@ -91,9 +81,8 @@ public class Order {
 
     public Media getLuckyitem() {                   //Chon ngau nhien mot item trong Order va giam gia item do ve 0$, neu Order chua co item nao thi tra ve null.
         if (this.itemsOrdered.size() == 0) return null;
-        Media luckyItem = this.itemsOrdered.get((int)(this.itemsOrdered.size()*Math.random()));
-        luckyItem.setCost(0f);
-        return luckyItem;
+        this.luckyItem = this.itemsOrdered.get((int)(this.itemsOrdered.size()*Math.random()));
+        return this.luckyItem;
     }
 
     public void printOrderInfo() {
