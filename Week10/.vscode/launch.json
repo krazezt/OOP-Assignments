@@ -1,0 +1,114 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch JavaFXCounter",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.gui.javafx.JavaFXCounter",
+            "vmArgs": "--module-path D:/JavaFX/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib --add-modules javafx.controls,javafx.fxml",
+            "projectName": "Week10_314601fe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Aims",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.aims.Aims",
+            "projectName": "Week10_314601fe"
+        },
+        {
+            "type": "java",
+            "name": "Launch DiscTest",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.aims.DiscTest",
+            "projectName": "Week10_314601fe"
+        },
+        {
+            "type": "java",
+            "name": "Launch AWTCounter",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.gui.awt.AWTCounter",
+            "projectName": "Week10_314601fe"
+        },
+        {
+            "type": "java",
+            "name": "Launch HelloJavaFX",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.gui.javafx.HelloJavaFX",
+            "vmArgs": "--module-path D:/JavaFX/openjfx-16_windows-x64_bin-sdk/javafx-sdk-16/lib --add-modules javafx.controls,javafx.fxml",
+            "projectName": "Week10_314601fe"
+        },
+        {
+            "type": "java",
+            "name": "Launch SwingCounter",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.gui.swing.SwingCounter",
+            "projectName": "Week10_314601fe"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestMediaCompareTo",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.test.Media.TestMediaCompareTo",
+            "projectName": "Week10_314601fe"
+        },
+        {
+            "type": "java",
+            "name": "Launch ConcatenationInLoops",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.test.Others.ConcatenationInLoops",
+            "projectName": "Week10_314601fe"
+        },
+        {
+            "type": "java",
+            "name": "Launch GarbageCreator",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.test.Others.GarbageCreator",
+            "projectName": "Week10_314601fe"
+        },
+        {
+            "type": "java",
+            "name": "Launch NoGarbage",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.test.Others.NoGarbage",
+            "projectName": "Week10_314601fe"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestBook",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.test.Others.TestBook",
+            "projectName": "Week10_314601fe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Disctest",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.test.disc.Disctest",
+            "projectName": "Week10_314601fe"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ordertest",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.test.order.Ordertest",
+            "projectName": "Week10_314601fe"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestDateUtils",
+            "request": "launch",
+            "mainClass": "hust.soict.hedspi.test.utils.TestDateUtils",
+            "projectName": "Week10_314601fe"
+        }
+    ]
+}
